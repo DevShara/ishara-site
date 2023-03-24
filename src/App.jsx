@@ -1,17 +1,21 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className=" flex flex-col  items-center justify-center h-screen">
-      <h1 className=" text-3xl leading-snug  text-center">
-        <span className=" font-bold">ISHARA SAMUDITHA</span>
-        <br/>
-        IS
-        <br />
-        A WEB DEVELOPER
-      </h1>
-    </div>
+    <>
+      <Navbar />
+      <div className=" flex flex-col  items-center justify-center h-screen bg-slate-300">
+        <h1 className=" text-3xl leading-snug  text-center">
+          <span className=" font-bold">ISHARA SAMUDITHA</span>
+          <br/>
+          IS
+          <br />
+          A WEB DEVELOPER
+        </h1>
+      </div>
+    </>
   );
 };
 
