@@ -1,8 +1,8 @@
 const Skills = () => {
     return(
-        <div className="container mx-auto p-12 ">
+        <div className="container mx-auto px-12 ">
 
-            <div className="bg-gray-100 p-12 rounded-xl">
+            <div className="bg-gray-100 p-12 rounded-2xl">
             <h2 className=" text-3xl font-semibold text-gray-700">Skills, Familiar Tools & Technologies</h2>
                 <ul className="  mt-3 ">
                     <li className=" border-b-2 py-4">
