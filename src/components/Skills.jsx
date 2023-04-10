@@ -1,9 +1,15 @@
+import Fade from 'react-reveal/Fade';
+
+
 const Skills = () => {
     return(
         <div className="container mx-auto px-12 ">
 
             <div className="bg-gray-100 p-12 rounded-2xl">
+            <Fade>
             <h2 className=" text-3xl font-semibold text-gray-700">Skills, Familiar Tools & Technologies</h2>
+            </Fade>
+            <Fade bottom cascade>
                 <ul className="  mt-3 ">
                     <li className=" border-b-2 py-4">
                         <p className="text-gray-600  text-lg">                            
@@ -36,6 +42,7 @@ const Skills = () => {
                         </p>
                     </li>
                 </ul>
+                </Fade>
             </div>
             
         </div>
