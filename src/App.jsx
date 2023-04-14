@@ -15,11 +15,13 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      
-        <About />
-  
+    <div id="about">
+      <About />
+    </div>
       <Skills/>
+    <div id="works">
       <Works />
+    </div>
       <Contact />
     </>
   );
