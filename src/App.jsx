@@ -9,11 +9,21 @@ import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Zoom';
 import Contact from "./components/Contact";
 
+import { ThemeContext } from './context';
+
+import { useState} from "react";
 
 const App = () => {
+
+  const [theme, setTheme] = useState({textColor:'text-gray-500'});
+
+  function changeTheme(){
+    setTheme({textColor:'text-red-500'})
+  }
+
   return (
-    <>
-      <Navbar />
+    <ThemeContext.Provider value={theme}>
+      <Navbar changeTheme={changeTheme} />
       <Hero />
     <div id="about">
       <About />
@@ -22,8 +32,10 @@ const App = () => {
     <div id="works">
       <Works />
     </div>
+    <div className="contact">
       <Contact />
-    </>
+    </div>
+    </ThemeContext.Provider>
   );
 };
 
