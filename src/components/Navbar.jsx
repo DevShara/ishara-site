@@ -17,10 +17,10 @@ function classNames(...classes) {
 
 export default function Navbar({changeTheme}) {
   return (
-    <Disclosure as="nav" className="">
+    <Disclosure as="nav" className=" sticky top-0 z-50 ">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-12 ">
+          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-12   bg-gray-50 shadow-xl border-b-gray-400 border ">
             <div className="relative flex h-16 px-12 items-center justify-between ">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
