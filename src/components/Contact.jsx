@@ -21,7 +21,6 @@ const Contact = () => {
                 bgColour: "bg-gray-800",
                 borderColour: " border-gray-600",
                 formTextColour: " text-gray-700"
-
             })
         }   
          

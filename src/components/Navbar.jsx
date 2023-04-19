@@ -4,6 +4,13 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import { Link, animateScroll as scroll } from "react-scroll";
 
+import { MdOutlineLightMode } from "react-icons/md";
+import { CiDark } from "react-icons/ci";
+
+import { useContext } from 'react';
+import { ThemeContext } from '../context';
+
+
 
 const navigation = [
   { name: 'About', href: 'about', current: false },
@@ -12,15 +19,18 @@ const navigation = [
 ]
 
 function classNames(...classes) {
+
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar({changeTheme}) {
+  const theme = useContext(ThemeContext);
+
   return (
     <Disclosure as="nav" className=" sticky top-0 z-50 ">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-12   bg-gray-50 shadow-xl border-b-gray-400 border ">
+          <div className={`mx-auto max-w-7xl px-2 sm:px-6 lg:px-12 shadow-xl border-b-gray-500 border-b  ${theme== "light" ?  " bg-gray-50" : " bg-gray-800 "} `}>
             <div className="relative flex h-16 px-12 items-center justify-between ">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -42,7 +52,7 @@ export default function Navbar({changeTheme}) {
                 offset={-70}
                 duration={1000}
                 delay={100}
-                className='font-bold text-lg cursor-pointer'>ISHARA</Link>
+                className={`font-bold text-lg cursor-pointer  ${theme == "light" ? ' text-gray-800' : 'text-gray-100'}`}>ISHARA</Link>
                 
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -58,6 +68,7 @@ export default function Navbar({changeTheme}) {
                         delay={100}
                         className={classNames(
                           item.current ? 'underline text-gray-800' : 'text-gray-800 hover:underline   underline-offset-4 ',
+                          theme == "light" ? ' text-gray-800' : 'text-gray-100',
                           'rounded-md px-3 py-2 text-md font-medium cursor-pointer'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -69,77 +80,28 @@ export default function Navbar({changeTheme}) {
                 </div>
 
               </div>
-              {/* <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"> */}
-                {/* <button
-                  type="button"
-                  className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button> */}
+             
 
-                {/* Profile dropdown */}
-                {/* <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu> */}
-              {/* </div> */}
-              <input
-                type="checkbox"
-                className='ml-12'
-                onChange={() => {
-                  changeTheme()
-                }}/>
+              <div class="flex items-center justify-center ml-6">
+  
+              <label for="toggleB" class="flex items-center cursor-pointer">
+              
+                <div class="relative">
+              
+                  <input type="checkbox" id="toggleB" class="sr-only" onChange={() => {
+                    changeTheme()
+                  }} />
+
+                  <div class="block bg-gray-500 w-14 h-8 rounded-full"></div>
+                  <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full flex justify-center  items-center transition">{theme == 'light' ? <MdOutlineLightMode /> : <CiDark /> }</div>
+                </div>
+
+             
+              </label>
+
+            </div>
+        
+             
 
             </div>
             
