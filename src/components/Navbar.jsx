@@ -108,7 +108,14 @@ export default function Navbar({changeTheme}) {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pt-2 pb-3">
+            <div className={classNames(
+              theme == "light" ? 'text-red-800 bg-gray-100' : 'text-gray-100 bg-gray-800',
+              'space-y-1 px-2 pt-2 pb-3 border-b-gray-500 border-b'
+              
+              )}
+              
+              >
+
 
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -117,6 +124,7 @@ export default function Navbar({changeTheme}) {
                   href={item.href}
                   className={classNames(
                     item.current ? 'bg-gray-900 text-white' : 'text-gray-900 hover:bg-gray-900 hover:text-white',
+                    theme == "light" ? ' text-gray-800' : 'text-gray-100',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
