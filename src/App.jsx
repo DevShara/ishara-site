@@ -9,19 +9,42 @@ import Fade from 'react-reveal/Fade';
 import Reveal from 'react-reveal/Zoom';
 import Contact from "./components/Contact";
 
+import { ThemeContext } from './context';
+import { useContext } from "react";
+
+import { useState} from "react";
 
 const App = () => {
+
+  const [theme, setTheme] = useState('light');
+
+  function changeTheme(){
+    if(theme === 'light'){ 
+    setTheme('dark')
+    }else{
+      setTheme('light')
+    }
+  }
+
+
+
   return (
-    <>
-      <Navbar />
-      <Hero />
-      
+    <ThemeContext.Provider value={theme}>
+      <div className={`${theme == 'light' ? 'bg-white' : 'bg-gray-900'}`}>
+        <Navbar changeTheme={changeTheme} />
+        <Hero />
+      <div id="about">
         <About />
-  
-      <Skills/>
-      <Works />
-      <Contact />
-    </>
+      </div>
+        <Skills/>
+      <div id="works">
+        <Works />
+      </div>
+      <div className="contact">
+        <Contact />
+      </div>
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
