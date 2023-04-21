@@ -67,8 +67,8 @@ export default function Navbar({changeTheme}) {
                         duration={1000}
                         delay={100}
                         className={classNames(
-                          item.current ? 'underline text-gray-800' : 'text-gray-800 hover:underline   underline-offset-4 ',
                           theme == "light" ? ' text-gray-800' : 'text-gray-100',
+                          item.current ? 'underline ' : 'over:underline   underline-offset-4 ',
                           'rounded-md px-3 py-2 text-md font-medium cursor-pointer'
                         )}
                         aria-current={item.current ? 'page' : undefined}
