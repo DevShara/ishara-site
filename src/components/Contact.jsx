@@ -29,13 +29,17 @@ const Contact = () => {
     return(
         <div className="container mx-auto px-12">
             <div className={`bg-gray-200 p-12 rounded-xl ${themeStyles.bgColour} ${themeStyles.textColour}`}>
-                <h1 className={`text-3xl font-semibold `}>Contact</h1>
                 <div className="flex flex-row justify-center gap-8 items-center ">
                     <div className="w-3/5">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus exercitationem qui quis ipsum eos. Sequi sint minus enim debitis? Commodi repudiandae ea exercitationem corporis aliquam, magni autem aut ut nostrum!</p>
+                        <p className='   leading-7   text-justify'>My passion is to help organizations turn their ideas into impactful digital solutions that drive progress and make a difference in the world. With a focus on thoughtful design and innovative technology, I work collaboratively to transform complex challenges into user-friendly digital experiences that are not just beautiful but also functional and impactful.
+                        <br></br>
+                        <br></br>
+                        Together, let's build digital solutions that connect, inspire, and make a difference. With a focus on innovation and purpose, we can shape a better world for all through quality digital solutions.</p>
                     </div>
             
                     <div className=" w-2/5 flex flex-col  p-6 gap-3">
+                    <h1 className={`text-3xl font-semibold `}>Let's build something awesome together! </h1>
+
                         <label htmlFor="name">
                             Name
                             <input type="text" id="name" placeholder="Name" className={`block w-full ${themeStyles.formTextColour}`}  />

@@ -13,9 +13,16 @@ input:checked ~ .dot {
     background-color: #fff;
 }
 
+.hero-container-light{
+    background:
+    linear-gradient(to bottom, rgba(88, 88, 88, 0.95), rgba(121, 121, 121, 0.93)),
+    url(../../assets/hero-light.jpg);
+    background-size: cover;
+}
+
 .hero-container-dark{
     background:
-    linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(68, 64, 67, 0.73)),
-    url(../../assets/hero-light.jpg);
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.52), rgba(13, 7, 31, 0.73)),
+    url(../../assets/hero-dark.jpg);
     background-size: cover;
 }

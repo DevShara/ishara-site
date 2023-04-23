@@ -12,7 +12,7 @@ const About = () => {
             <div className={`container mx-auto flex flex-col md:flex-row gap-6  p-12 items-center ${theme == 'light'? 'text-gray-700' : 'text-gray-200'}` }>
                 <div className=' w-3/6  p-12 '>
                     
-                    <p>As a web developer with experience in React JS, I bring a passion for programming and a strong problem-solving mind-set to my work. My previous background in graphic design has honed my eye for detail and aesthetics, which I apply to create visually appealing and user-friendly web applications.</p>
+                    <p className=' leading-7 text-lg text-justify'>As a web developer with experience in Front End Development, I bring a passion for programming and a strong problem-solving mind-set to my work. My previous background in graphic design has honed my eye for detail and aesthetics, which I apply to create visually appealing and user-friendly web applications.</p>
                         <div className=' mt-6'>
                             <h4>Connect with Ishara</h4>
                             <div className='flex mt-3'>
