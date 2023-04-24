@@ -13,18 +13,27 @@ const Hero = () => {
   const theme =  useContext(ThemeContext)
 
     return(
-    <div className={`flex flex-col items-center justify-center h-screen text-gray-200 ${theme == 'light' ? 'hero-container-light' : 'hero-container-dark'}`} >
-        <div className='flex flex-row items-center  flex-wrap justify-center p-24 gap-6 '>
-            <div className=' w-1/2  '>
-              <h1 className=" text-3xl leading-snug text-left ">
-                Together, let's build digital solutions that connect, inspire, and make a difference. With a focus on innovation and purpose
+    <div className={`flex flex-col items-center justify-center h-screen overflow-hidden text-gray-200 ${theme == 'light' ? 'hero-container-light' : 'hero-container-dark'}`} >
+        <div className='flex flex-col md:flex-row items-center  justify-center px-16 md:gap-6 gap-14'>
+            <div className=' md:w-2/5  w-full '>
+              <h1 className=" md:text-4xl text-3xl md:leading-snug text-left    ">
+                Together, let's build digital solutions that connect, inspire, and make a difference.
               </h1>
+              <Link
+              to='about'
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={1000}
+              delay={100}
+              
+              ><button className='mt-12 border p-6 rounded-full hover:bg-white hover:text-gray-700 transition-all'>Learn more</button></Link>
             </div>
-            <div className=' flex-shrink flex-grow-0 w-1/2  '>
-            <img src={heroImage} className=' w-full  h-auto' />
+            <div className=' flex-shrink flex-grow-0 md:w-3/5 w-full  '>
+            <img src={heroImage} className='  w-full  h-auto' />
             </div>
         </div>
-        <button className='text-4xl animate-bounce '></button>
+        
         <Link 
                 to='about'
                 spy={true}
@@ -32,7 +41,7 @@ const Hero = () => {
                 offset={-70}
                 duration={1000}
                 delay={100}
-                className={`font-bold cursor-pointer text-4xl animate-bounce mt-6  `}><BsArrowDownCircle /></Link>
+                className={`font-bold cursor-pointer text-5xl animate-bounce   `}><BsArrowDownCircle /></Link>
     </div>
     )
 }

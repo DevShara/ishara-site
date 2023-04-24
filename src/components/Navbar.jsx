@@ -27,7 +27,7 @@ export default function Navbar({changeTheme}) {
   const theme = useContext(ThemeContext);
 
   return (
-    <Disclosure as="nav" className=" sticky top-0 z-50 ">
+    <Disclosure as="nav" className=" sticky top-0 z-50  ">
       {({ open }) => (
         <>
           <div className={`mx-auto max-w-7xl px-2 sm:px-6 lg:px-12 shadow-xl border-b-gray-500 border-b  ${theme== "light" ?  " bg-gray-50" : " bg-gray-800 "} `}>
@@ -52,7 +52,7 @@ export default function Navbar({changeTheme}) {
                 offset={-70}
                 duration={1000}
                 delay={100}
-                className={`font-bold text-lg cursor-pointer  ${theme == "light" ? ' text-gray-800' : 'text-gray-100'}`}>ISHARA</Link>
+                className={`font-bold text-xl cursor-pointer  ${theme == "light" ? ' text-gray-800' : 'text-gray-100'}`}>ISHARA</Link>
                 
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
