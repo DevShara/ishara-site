@@ -82,18 +82,18 @@ export default function Navbar({changeTheme}) {
               </div>
              
 
-              <div class="flex items-center justify-center ml-6">
+              <div className="flex items-center justify-center ml-6">
   
-              <label for="toggleB" class="flex items-center cursor-pointer">
+              <label htmlFor="toggleB" className="flex items-center cursor-pointer">
               
-                <div class="relative">
+                <div className="relative">
               
-                  <input type="checkbox" id="toggleB" class="sr-only" onChange={() => {
+                  <input type="checkbox" id="toggleB" className="sr-only" onChange={() => {
                     changeTheme()
                   }} />
 
-                  <div class="block bg-gray-500 w-14 h-8 rounded-full"></div>
-                  <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full flex justify-center  items-center transition">{theme == 'light' ? <MdOutlineLightMode /> : <CiDark /> }</div>
+                  <div className="block bg-gray-500 w-14 h-8 rounded-full"></div>
+                  <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full flex justify-center  items-center transition">{theme == 'light' ? <MdOutlineLightMode /> : <CiDark /> }</div>
                 </div>
 
              
