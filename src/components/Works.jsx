@@ -1,8 +1,8 @@
 const Works = () => {
     return(
-        <div className="container mx-auto  p-12">
-            <h2 className=" ml-12 text-3xl font-semibold text-gray-700">Works</h2>
-            <div  className="grid grid-cols-4 pt-6 px-12 gap-6">
+        <div className="container mx-auto  md:p-12 p-6">
+            <h2 className=" md:ml-12 text-3xl font-semibold text-gray-700">Works</h2>
+            <div  className="grid md:grid-cols-4 pt-6 md:px-12 gap-6">
                 <div className=" bg-gray-100 rounded-lg shadow-xl">
                     <a href="#">
                         <img className="rounded-t-lg   hover:opacity-80 transition-all" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />

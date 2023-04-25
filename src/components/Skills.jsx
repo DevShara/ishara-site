@@ -29,7 +29,7 @@ const Skills = () => {
 
 
     return(
-        <div className="container mx-auto px-12 ">
+        <div className="container mx-auto md:px-12 p-6  ">
 
             <div className={` p-12 rounded-2xl ${themeStyles.textColour} ${themeStyles.bgColour} `}>
         
