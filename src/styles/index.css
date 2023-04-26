@@ -14,15 +14,15 @@ input:checked ~ .dot {
 }
 
 .hero-container-light{
-    background:
-    linear-gradient(to bottom, rgba(88, 88, 88, 1), rgba(121, 121, 121, 0.93)),
-    url(../../assets/hero-light.jpg);
-    background-size: cover;
+    background: rgb(88,88,88);
+    background: linear-gradient(90deg, rgba(88,88,88,1) 0%, rgba(195,195,195,1) 70%);
 }
 
 .hero-container-dark{
-    background:
+    /* background:
     linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(13, 7, 31, 0.95)),
     url(../../assets/hero-dark.jpg);
-    background-size: cover;
+    background-size: cover; */
+    background: rgb(26,34,46);
+    background: linear-gradient(90deg, rgba(26,34,46,1) 0%, rgba(41,63,93,1) 76%);
 }

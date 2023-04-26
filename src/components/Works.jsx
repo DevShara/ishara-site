@@ -24,7 +24,7 @@ const Works = () => {
     }, [theme])
 
     return(
-        <div className="container mx-auto  md:p-12 p-6">
+        <div className="container mx-auto   md:p-12 p-6">
             <h2 className={`md:ml-12 text-3xl font-semibold ${themeStyles.textColour}`}>Works</h2>
             <div  className={`grid md:grid-cols-4 pt-6 md:px-12 gap-6 `}>
                 <div className={`rounded-lg shadow-xl  border-gray-300 border ${themeStyles.cardBgColor}`}>

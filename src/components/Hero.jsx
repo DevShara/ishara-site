@@ -30,8 +30,8 @@ const Hero = () => {
   };
 
     return(
-    <div className={`flex flex-col items-center justify-center h-screen overflow-hidden text-gray-200 ${theme == 'light' ? 'hero-container-light' : 'hero-container-dark'}`} >
-        <div className='flex flex-col md:flex-row items-center  justify-center px-16 md:gap-6 gap-14'>
+    <div className={`flex flex-col items-center justify-center rounded-b-3xl  h-screen overflow-hidden text-gray-200 ${theme == 'light' ? 'hero-container-light' : 'hero-container-dark'}`} >
+        <div className='flex flex-col md:flex-row items-center  container mx-auto justify-center px-16 md:gap-6 gap-14'>
             <motion.div className=' md:w-2/5  w-full '
               initial={{opacity: 0, scale: 2, x: "-100%" }}
               animate={{ opacity: 1, scale: 1, x: "10%" }}
@@ -41,7 +41,7 @@ const Hero = () => {
                 ease: [0, 0.71, 0.2, 1.01]
               }}
             >
-              <h1 className=" md:text-4xl text-3xl md:leading-snug text-left    ">
+              <h1 className={` md:text-4xl text-3xl md:leading-snug text-left `}>
                 Together, let's build digital solutions that connect, inspire, and make a difference.
               </h1>
               <Link
