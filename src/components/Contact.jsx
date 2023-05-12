@@ -28,21 +28,24 @@ const Contact = () => {
          
     }, [theme])
 
-    function submitForm(e){
+    const  submitForm = (e) => {
         e.preventDefault();
-        console.log('button pressed', formData)
+      console.log('button pressed', formData)
         fetch('/api/contact', {
             method: 'POST',
             body: JSON.stringify(formData)
         })
+        .then(response => response.json())
         .then(data => {
             console.log(data)
-        })
+        } )
+           
         .catch(err => {
             console.log(err)
         })
     }
 
+    
     return(
         <div className="container mx-auto md:px-12 p-6">
             <div className={`bg-gray-200 md:p-12 p-6 rounded-xl ${themeStyles.bgColour} ${themeStyles.textColour}`}>
