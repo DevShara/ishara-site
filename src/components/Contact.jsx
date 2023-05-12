@@ -3,8 +3,10 @@ import { ThemeContext } from '../context';
 
 
 const Contact = () => {
-      const theme = useContext(ThemeContext);
+    const theme = useContext(ThemeContext);
     const [themeStyles, setThemeStyle] = useState({});
+
+    const [formData, setFormData] = useState({});
 
     useEffect(() => {
         if(theme == 'light'){ 
@@ -26,6 +28,24 @@ const Contact = () => {
          
     }, [theme])
 
+    const  submitForm = (e) => {
+        e.preventDefault();
+      console.log('button pressed', formData)
+        fetch('/api/contact', {
+            method: 'POST',
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        } )
+           
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
+    
     return(
         <div className="container mx-auto md:px-12 p-6">
             <div className={`bg-gray-200 md:p-12 p-6 rounded-xl ${themeStyles.bgColour} ${themeStyles.textColour}`}>
@@ -40,15 +60,25 @@ const Contact = () => {
                     <div className=" md:w-2/5 flex flex-col  md:p-6 gap-3">
                     <h1 className={`text-3xl font-semibold `}>Let's build something awesome together! </h1>
 
-                        <label htmlFor="name">
+                       <form onSubmit={submitForm}>
+                       <label htmlFor="name">
                             Name
-                            <input type="text" id="name" placeholder="Name" className={`block w-full ${themeStyles.formTextColour}`}  />
+                            <input type="text" id="name" placeholder="Name"
+                                className={`block w-full ${themeStyles.formTextColour}`}
+                                onChange={(e) => setFormData({...formData, name:e.target.value})}
+                                value={formData.name}
+                                />
                         </label>
                         <label htmlFor="name">
                             Email
-                            <input type="email" id="name" placeholder="Email" className={`block w-full ${themeStyles.formTextColour}`} />
+                            <input type="email" id="name" placeholder="Email"
+                            className={`block w-full ${themeStyles.formTextColour}`}
+                            onChange={(e) => setFormData({...formData, email:e.target.value})}
+                            value={formData.email}
+                            />
                         </label>
                         <button className="bg-gray-500 text-white  p-2  w-fit">contact</button>
+                       </form>
                     </div>
                 </div>
             </div>
