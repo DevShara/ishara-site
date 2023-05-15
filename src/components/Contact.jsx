@@ -28,18 +28,19 @@ const Contact = () => {
          
     }, [theme])
 
-    const  submitForm = (e) => {
+    const submitForm = (e) => {
         e.preventDefault();
-      console.log('button pressed', formData)
-        fetch('/api/contact', {
-            method: 'POST',
+        fetch('.netlify/functions/contact/', {
+            method: 'post',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         })
-        .then(response => response.json())
+        .then(response => {
+            return(response.json( ))
+        })
         .then(data => {
             console.log(data)
-        } )
-           
+        })
         .catch(err => {
             console.log(err)
         })
