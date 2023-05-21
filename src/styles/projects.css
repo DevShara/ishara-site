@@ -1,0 +1,41 @@
+.project-item-1{
+    background-image:  url('../../assets/wp-website.JPG');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.project-item-2{
+    background-image:  url('../../assets/hoarding-f.jpg');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.project-item-3{
+    background-image:  url('../../assets/wp-website.JPG');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.project-item-4{
+    background-image:  url('../../assets/wp-website.JPG');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tech-stack-list{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.tech-stack-item{
+    margin-right: 10px;
+}
+.tech-stack-item::before{
+    content: '• ';
+    vertical-align:auto;
+}

@@ -1,7 +1,9 @@
-import { useContext, useEffect, useState } from 'react';
+import  {useContext, useState, useEffect} from 'react';
 import { ThemeContext } from '../context';
 
-const Works = () => {
+import { motion } from 'framer-motion';
+
+const Projects = () => {
     const theme = useContext(ThemeContext);
     const [themeStyles, setThemeStyle] = useState({});
 
@@ -10,87 +12,156 @@ const Works = () => {
             setThemeStyle({
                 textColour: "text-gray-700",
                 bgColour: "bg-gray-100",
-                cardBgColor: "bg-gray-100"
+                borderColour: " border-gray-200"
             })
 
         }else{
             setThemeStyle({
-                textColour: "text-gray-100",
+                textColour: "text-gray-300",
                 bgColour: "bg-gray-800",
-                cardBgColor: "bg-gray-800"
+                borderColour: " border-gray-600"
+
             })
         }   
          
     }, [theme])
 
-    return(
-        <div className="container mx-auto   md:p-12 p-6">
-            <h2 className={`md:ml-12 text-3xl font-semibold ${themeStyles.textColour}`}>Works</h2>
-            <div  className={`grid md:grid-cols-4 pt-6 md:px-12 gap-6 `}>
-                <div className={`rounded-lg shadow-xl  border-gray-300 border ${themeStyles.cardBgColor}`}>
-                    <a href="#">
-                        <img className="rounded-t-lg   hover:opacity-80 transition-all" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                    </a>
-                    <div className="p-6">
-                        <a href="#">
-                            <h5 className={`mb-2 text-2xl font-semibold tracking-tight ${themeStyles.textColour}`}>WP Website</h5>
-                        </a>
-                        <p className={`mb-3 font-normal  ${themeStyles.textColour}`}>Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                <div className={`rounded-lg shadow-xl border-gray-300 border ${themeStyles.cardBgColor}`}>
-                    <a href="#">
-                        <img className="rounded-t-lg   hover:opacity-80 transition-all" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                    </a>
-                    <div className="p-6">
-                        <a href="#">
-                            <h5 className={`mb-2 text-2xl font-semibold tracking-tight ${themeStyles.textColour}`}>WP Website</h5>
-                        </a>
-                        <p className={`mb-3 font-normal  ${themeStyles.textColour}`}>Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                <div className={`rounded-lg shadow-xl border-gray-300 border ${themeStyles.cardBgColor}`}>
-                    <a href="#">
-                        <img className="rounded-t-lg   hover:opacity-80 transition-all" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                    </a>
-                    <div className="p-6">
-                        <a href="#">
-                            <h5 className={`mb-2 text-2xl font-semibold tracking-tight ${themeStyles.textColour}`}>WP Website</h5>
-                        </a>
-                        <p className={`mb-3 font-normal  ${themeStyles.textColour}`}>Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </div>
-                <div className={`rounded-lg shadow-xl border-gray-300 border ${themeStyles.cardBgColor}`}>
-                    <a href="#">
-                        <img className="rounded-t-lg   hover:opacity-80 transition-all" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
-                    </a>
-                    <div className="p-6">
-                        <a href="#">
-                            <h5 className={`mb-2 text-2xl font-semibold tracking-tight ${themeStyles.textColour}`}>WP Website</h5>
-                        </a>
-                        <p className={`mb-3 font-normal  ${themeStyles.textColour}`}>Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                        <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                            Read more
-                            <svg aria-hidden="true" className="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                        </a>
-                    </div>
-                </div>
+    const item=  {
+        visible: i => ({
+                opacity: 1,
+            
+                transition: {
+                    delay: i * 0.3,
+                  },
                
-            </div>
+            }),
+        hidden: { opacity: 0},
+        
+      }
+    return (
+        <div className=' container mx-auto my-6 py-6 px-12 px-12' >
+           <h1 className={`text-2xl font-semibold ${themeStyles.textColour}  `} >Projects I’ve Built</h1>
+           <div className='grid grid-cols-1 md:grid-cols-4 mt-6  gap-6 text-white ' id='works'>
+                <motion.div
+                    className='rounded-xl relative project-item-1'
+                    whileHover={{ scale: 1.05,  opacity:0.9 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 25 }}
+                    whileTap={{
+                        scale: 0.85,                     
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={item}
+                    custom={0.25}
+                    
+                >
+                    <div className='absolute left-6 top-6'>
+                        <h3 className=''>Website</h3>
+                        <h2 className='font-bold text-xl'>WP Website</h2>
+                    </div>
+                    <div className='  w-full absolute bottom-0 py-4 backdrop-blur-sm rounded-b-xl  px-6 bg-black/40 flex flex-col  gap-3   '>
+                       
+                        <ul className='tech-stack-list  '>
+                            <li className='tech-stack-item'>Gatsby</li>
+                            <li className='tech-stack-item'>Tailwind CSS</li>
+                            <li className='tech-stack-item'>Sanity</li>
+                            <li className='tech-stack-item'>Netify</li>
+                        </ul>
+                        <div className=' '>
+                        <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='http://wayambaprinters.netlify.app/' target="_blank">Learn more</a></button>
+                        </div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    className='rounded-xl relative project-item-2'
+                    whileHover={{ scale: 1.05,  opacity:0.9 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 25 }}
+                    whileTap={{
+                        scale: 0.85,
+                       
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={item}
+                    custom={1}
+                >
+                    <div className='absolute left-6 top-6'>
+                        <h3 className=''>Web App</h3>
+                        <h2 className='font-bold text-xl'>Hoarding Finder</h2>
+                    </div>
+                    <div className='  w-full absolute bottom-0 py-4 backdrop-blur-sm rounded-b-xl  px-6 bg-black/40 flex flex-col  gap-3   '>
+                       
+                        <ul className='tech-stack-list  '>
+                            <li className='tech-stack-item'>React</li>
+                            <li className='tech-stack-item'>Tailwind CSS</li>
+                            <li className='tech-stack-item'>Sanity</li>
+                        </ul>
+                        <div className=' '>
+                        <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='https://hoarding-finder.netlify.app/'>Learn more</a></button>
+                        </div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    className='rounded-xl relative project-item-3'
+                    whileHover={{ scale: 1.05,  opacity:0.9 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 25 }}
+                    whileTap={{
+                        scale: 0.85,
+                       
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={item}
+                    custom={1.5}
+                >
+                    <div className='absolute left-6 top-6'>
+                        <h3 className=''>Website</h3>
+                        <h2 className='font-bold text-xl'>Personal Website</h2>
+                    </div>
+                    <div className='  w-full absolute bottom-0 py-4 backdrop-blur-sm rounded-b-xl px-6 bg-black/40 flex flex-col  gap-3   '>
+                       
+                        <ul className='tech-stack-list  '>
+                            <li className='tech-stack-item'>React</li>
+                            <li className='tech-stack-item'>Tailwind CSS</li>
+                            <li className='tech-stack-item'>Vercel</li>
+                        </ul>
+                        <div className=' '>
+                            <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='http://wayambaprinters.netlify.app/' target='_blank'>Learn more</a></button>
+                        </div>
+                    </div>
+                </motion.div>
+                <motion.div
+                    className='rounded-xl relative project-item-4'
+                    whileHover={{ scale: 1.05,  opacity:0.9 }}
+                    transition={{ type: "spring", stiffness: 100, damping: 25 }}
+                    whileTap={{
+                        scale: 0.85,
+                       
+                    }}
+                    initial="hidden"
+                    whileInView="visible"
+                    variants={item}
+                    custom={2}
+                >
+                    <div className='absolute left-6 top-6'>
+                        <h3 className=''>Web App</h3>
+                        <h2 className='font-bold text-xl'>Employee Rewarder</h2>
+                    </div>
+                    <div className='  w-full absolute bottom-0 py-4 backdrop-blur-sm rounded-b-xl  px-6 bg-black/40 flex flex-col  gap-3   '>
+                       
+                        <ul className='tech-stack-list  '>
+                            <li className='tech-stack-item'>Next js</li>
+                            <li className='tech-stack-item'>Tailwind Css</li>
+                            <li className='tech-stack-item'>Sanity</li>
+                        </ul>
+                        <div className=' '>
+                        <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='http://wayambaprinters.netlify.app/'>Learn more</a></button>
+                        </div>
+                    </div>
+                </motion.div>
+           </div>
         </div>
-    )
-}
+    );
+};
 
-export default Works;
+export default Projects;
