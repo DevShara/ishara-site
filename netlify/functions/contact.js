@@ -5,8 +5,6 @@ exports.handler = (event, _context, callback) => {
   //  console.log('data', JSON.parse(event.body))
     const sgMail = require('@sendgrid/mail')
 
-    
-
     const data = JSON.parse(event.body);
 
     sgMail.setApiKey(process.env.SENDGRID_API_KEY)

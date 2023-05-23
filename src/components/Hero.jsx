@@ -4,7 +4,7 @@ import { ThemeContext } from '../context';
 
 import { Link, animateScroll as scroll } from "react-scroll";
 
-import heroImage from '../../assets/back.webp'
+import heroImage from '../../assets/back.png'
 
 import { motion } from "framer-motion";
 
