@@ -116,7 +116,7 @@ const Projects = () => {
                 >
                     <div className='absolute left-6 top-6'>
                         <h3 className=''>Website</h3>
-                        <h2 className='font-bold text-xl'>Personal Website</h2>
+                        <h2 className='font-bold text-xl'>Ceytive Website</h2>
                     </div>
                     <div className='  w-full absolute bottom-0 py-4 backdrop-blur-sm rounded-b-xl px-6 bg-black/40 flex flex-col  gap-3   '>
                        
@@ -126,7 +126,7 @@ const Projects = () => {
                             <li className='tech-stack-item'>Vercel</li>
                         </ul>
                         <div className=' '>
-                            <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='http://wayambaprinters.netlify.app/' target='_blank'>Learn more</a></button>
+                            <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='https://ceytive-site.vercel.app/' target='_blank'>Learn more</a></button>
                         </div>
                     </div>
                 </motion.div>
