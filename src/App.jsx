@@ -7,7 +7,7 @@ import { createRoot } from "react-dom/client";
 // import Works from "./components/Works";
 // import Contact from "./components/Contact";
 
-import { ThemeContext } from './context';
+import { ThemeContext } from './context.js';
 import { useContext } from "react";
 import { useState} from "react";
 

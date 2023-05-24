@@ -4,11 +4,11 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import { Link, animateScroll as scroll } from "react-scroll";
 
-import { MdOutlineLightMode } from "react-icons/md";
-import { CiDark } from "react-icons/ci";
+import { MdOutlineLightMode } from "react-icons/md/index.js";
+import { CiDark } from "react-icons/ci/index.js";
 
 import { useContext } from 'react';
-import { ThemeContext } from '../context';
+import { ThemeContext } from '../context.js';
 
 
 

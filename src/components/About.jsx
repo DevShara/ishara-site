@@ -1,7 +1,7 @@
 import img from '../../assets/img.jpg';
-import { FaGithub, FaBehance } from 'react-icons/fa';
+import { FaGithub, FaBehance } from 'react-icons/fa/index.js';
 import { useContext } from 'react';
-import { ThemeContext } from '../context';
+import { ThemeContext } from '../context.js';
 import { motion } from 'framer-motion';
 
 
