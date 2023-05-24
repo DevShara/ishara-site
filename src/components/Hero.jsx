@@ -1,6 +1,6 @@
-import { BsArrowDownCircle } from 'react-icons/bs';
+import { BsArrowDownCircle } from 'react-icons/bs/index.js';
 import { useContext } from 'react';
-import { ThemeContext } from '../context';
+import { ThemeContext } from '../context.js';
 
 import { Link, animateScroll as scroll } from "react-scroll";
 

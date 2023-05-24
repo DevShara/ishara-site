@@ -7,12 +7,12 @@ const ThemeContext = createContext({ textColor: "text-red-500" });
 const Fragment = jsxRuntime.Fragment;
 const jsx = jsxRuntime.jsx;
 const jsxs = jsxRuntime.jsxs;
-const Contact = lazy(() => import("./assets/Contact.37a52b94.js"));
-const Works = lazy(() => import("./assets/Works.9c7b4706.js"));
-const Skills = lazy(() => import("./assets/Skills.971c3a38.js"));
-const About = lazy(() => import("./assets/About.0351bd19.js"));
-const Navbar = lazy(() => import("./assets/Navbar.ea47c6f0.js"));
-const Hero = lazy(() => import("./assets/Hero.eade2053.js"));
+const Contact = lazy(() => import("./assets/Contact.9206fc4e.js"));
+const Works = lazy(() => import("./assets/Works.31fb1dd6.js"));
+const Skills = lazy(() => import("./assets/Skills.b9a8cecc.js"));
+const About = lazy(() => import("./assets/About.d612e226.js"));
+const Navbar = lazy(() => import("./assets/Navbar.b0cb6131.js"));
+const Hero = lazy(() => import("./assets/Hero.cda8a6ec.js"));
 const App = () => {
   const [theme, setTheme] = useState("dark");
   function changeTheme() {
