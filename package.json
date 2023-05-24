@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
-    "build": "vite build",
+    "build:client": "vite build --outDir ../dist/client",
+    "build:server": "vite build --outDir ../dist/server --ssr ServerApp.jsx",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node server.js",
     "preview": "vite preview"
   },
   "keywords": [],
@@ -30,10 +34,12 @@
     "@heroicons/react": "^2.0.16",
     "@sendgrid/mail": "^7.7.0",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "framer-motion": "^10.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-router-dom": "^6.4.1",
     "react-scroll": "^1.8.9"
   }
 }
