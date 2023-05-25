@@ -1,4 +1,4 @@
-import img from '../../assets/img.jpg';
+import img from '../../assets/ishara.jpg';
 import { FaGithub, FaBehance } from 'react-icons/fa/index.js';
 import { useContext } from 'react';
 import { ThemeContext } from '../context.js';
@@ -26,7 +26,7 @@ const About = () => {
 
     return(
      
-            <div className={`container mx-auto flex flex-col md:flex-row gap-6   md:px-12  p-12 items-center ${theme == 'light'? 'text-gray-700' : 'text-gray-200'}` }>
+            <div className={`container mx-auto flex flex-col md:flex-row gap-12   md:px-12  p-12 items-center ${theme == 'light'? 'text-gray-700' : 'text-gray-200'}` }>
                 <div className=' md:w-3/6  md:p-12 '>
                     
                     <motion.p 
@@ -56,7 +56,7 @@ const About = () => {
                         </motion.div>
                 </div>
                 <motion.div
-                    className=' md:w-3/6'
+                    className=' md:w-2/6 '
                     transition={{ type: "spring", stiffness: 100, damping: 25 }}
                        
                     initial="hidden"
@@ -64,7 +64,7 @@ const About = () => {
                     variants={item}
                     custom={0.5}
                     >
-                    <img src={img} className=" " />
+                    <img src={img} className="rounded-xl " />
                 </motion.div>
             </div>
      
