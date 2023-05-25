@@ -34,8 +34,8 @@ const App = () => {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <Suspense fallback={<div className="bg-red-600">
-        <h2 className="text-2xl">😂</h2>
+      <Suspense fallback={<div >
+     
       </div>  
       }>
         <div className={`${theme == 'light' ? 'bg-white' : 'bg-gray-900'}`}>
