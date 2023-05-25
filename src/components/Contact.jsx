@@ -1,13 +1,16 @@
 import { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from '../context.js';
 import { motion } from 'framer-motion';
+import { MdTrendingUp } from 'react-icons/md';
 
 
 const Contact = () => {
     const theme = useContext(ThemeContext);
     const [themeStyles, setThemeStyle] = useState({});
 
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({name:'', email:''});
+
+    const [isSubmitted, setIsSubmitted] = useState(false)
 
     useEffect(() => {
         if(theme == 'light'){ 
@@ -40,7 +43,7 @@ const Contact = () => {
             return(response.json( ))
         })
         .then(data => {
-            console.log(data)
+            setIsSubmitted(true)
         })
         .catch(err => {
             console.log(err)
@@ -90,8 +93,9 @@ const Contact = () => {
                     <div className=" md:w-2/5 flex flex-col  md:p-6 gap-3">
                     <h1 className={`text-2xl font-semibold `}>Let's build something awesome together! </h1>
 
-                       <form onSubmit={submitForm}>
-                       <label htmlFor="name">
+                      {!isSubmitted ?
+                        <form onSubmit={submitForm}>
+                        <label htmlFor="name">
                             Name
                             <input type="text" id="name" placeholder="Name" required
                                 className={`block w-full ${themeStyles.formTextColour}`}
@@ -108,7 +112,10 @@ const Contact = () => {
                             />
                         </label>
                         <button className="bg-gray-500 text-white  p-2  w-fit">contact</button>
-                       </form>
+                        </form> 
+                      :
+                      <p>Thanks for contacting me! I will get in touch with you shortly.</p>
+                      }  
                     </div>
                 </div>
             </motion.div>
