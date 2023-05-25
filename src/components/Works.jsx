@@ -155,7 +155,7 @@ const Projects = () => {
                             <li className='tech-stack-item'>Sanity</li>
                         </ul>
                         <div className=' '>
-                        <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='http://wayambaprinters.netlify.app/'>Learn more</a></button>
+                        <button className=' bg-white text-gray-800 px-4 py-2  font-semibold rounded-full'><a href='https://employee-rewarder.netlify.app/'>Learn more</a></button>
                         </div>
                     </div>
                 </motion.div>
