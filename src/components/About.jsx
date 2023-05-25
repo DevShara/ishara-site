@@ -50,8 +50,8 @@ const About = () => {
                         >
                             <h4>Connect with Ishara</h4>
                             <div className='flex mt-3'>
-                                <a href='£' className=' text-4xl mr-4'><FaGithub/></a>
-                                <a href='£' className=' text-4xl mr-4'><FaBehance /></a>
+                                <a href='https://github.com/DevShara' className=' text-4xl mr-4'><FaGithub/></a>
+                                <a href='#' className=' text-4xl mr-4'><FaBehance /></a>
                             </div>
                         </motion.div>
                 </div>
